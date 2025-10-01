@@ -98,7 +98,10 @@ const ContactForm: React.FC = () => {
     setIsSubmitting(true);
 
     try {
-      // Submit to Supabase
+      if (!supabase) {
+        throw new Error('Database connection not configured');
+      }
+
       const { data, error } = await supabase
         .from('contact_submissions')
         .insert([
@@ -119,8 +122,7 @@ const ContactForm: React.FC = () => {
 
       console.log('Form submitted successfully:', data);
       setIsSubmitted(true);
-      
-      // Reset form data
+
       setFormData({
         name: '',
         email: '',
@@ -128,11 +130,9 @@ const ContactForm: React.FC = () => {
         problem: '',
         additionalInfo: ''
       });
-      
+
     } catch (error) {
       console.error('Form submission error:', error);
-      
-      // Show error message to user
       alert('There was an error submitting your form. Please try again or contact us directly.');
     } finally {
       setIsSubmitting(false);
