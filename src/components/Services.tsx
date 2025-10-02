@@ -1,5 +1,5 @@
 import React from 'react';
-import { MessageCircle, Phone, Share2, Globe, Settings, Mic, Users } from 'lucide-react';
+import { MessageCircle, Share2, Globe, Settings, Mic, Users } from 'lucide-react';
 
 const Services: React.FC = () => {
   const services = [
@@ -7,11 +7,6 @@ const Services: React.FC = () => {
       icon: MessageCircle,
       title: "Chatbots",
       description: "Intelligent bots that handle customer support, lead qualification, appointment booking, and more. Custom-trained for your industry."
-    },
-    {
-      icon: Phone,
-      title: "Automated Phone Callers",
-      description: "Let AI handle phone-based appointment setting, lead follow-ups, and customer satisfaction surveys. Real human-like voices."
     },
     {
       icon: Share2,
