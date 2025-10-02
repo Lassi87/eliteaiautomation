@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { SplashCursor } from './components/ui/splash-cursor';
 import CursorFollower from './components/ui/cursor-follower';
 import Header from './components/Header';
 import Hero from './components/Hero';
@@ -35,6 +36,7 @@ function App() {
 
   return (
     <div className={`min-h-screen ${isDark ? 'dark' : ''}`}>
+      <SplashCursor />
       <CursorFollower />
       <Header isDark={isDark} toggleDark={toggleDarkMode} />
       <Hero />
