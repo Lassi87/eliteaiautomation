@@ -28,7 +28,7 @@ const Services: React.FC = () => {
             Our AI Services
           </h2>
           <p className="text-xl text-gray-600 dark:text-white">
-            From chat to calls — we automate it all.
+            From website to chatbots - we automate it all
           </p>
         </div>
         
