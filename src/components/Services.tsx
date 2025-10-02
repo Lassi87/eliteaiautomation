@@ -1,5 +1,5 @@
 import React from 'react';
-import { MessageCircle, Share2, Globe, Settings, Mic, Users } from 'lucide-react';
+import { MessageCircle, Share2, Globe, Settings, Mic } from 'lucide-react';
 
 const Services: React.FC = () => {
   const services = [
@@ -27,11 +27,6 @@ const Services: React.FC = () => {
       icon: Mic,
       title: "Voice Assistants",
       description: "AI voice bots that can answer calls, route customers, or even sell — like having a full-time receptionist."
-    },
-    {
-      icon: Users,
-      title: "Lead Qualification & CRM Automation",
-      description: "Capture, qualify, and automatically follow up with leads. AI handles the funnel — you focus on closing."
     }
   ];
 
