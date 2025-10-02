@@ -1,5 +1,5 @@
 import React from 'react';
-import { MessageCircle, Globe } from 'lucide-react';
+import { MessageCircle, Globe, Settings } from 'lucide-react';
 
 const Services: React.FC = () => {
   const services = [
@@ -12,6 +12,11 @@ const Services: React.FC = () => {
       icon: Globe,
       title: "AI-Powered Website Building",
       description: "Modern, lightning-fast websites built entirely by AI. Design, copy, SEO — done for you."
+    },
+    {
+      icon: Settings,
+      title: "Custom Integrations",
+      description: "We connect your existing tools (like CRMs, calendars, and Shopify) with our AI agents for full-stack automation."
     }
   ];
 
