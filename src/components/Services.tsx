@@ -69,7 +69,7 @@ const Services: React.FC = () => {
           {services.map((service, index) => (
             <div key={index} className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105 group relative overflow-hidden">
               {service.useImage && (
-                <div className="absolute inset-0 opacity-90 dark:opacity-80">
+                <div className="absolute inset-0 opacity-95 dark:opacity-95">
                   <img
                     src="/ChatGPT Image 3. lokak. 2025 klo 07.29.54.png"
                     alt=""
