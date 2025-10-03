@@ -1,5 +1,5 @@
 import React from 'react';
-import { MessageCircle, Globe, Settings } from 'lucide-react';
+import { MessageCircle, Globe, Settings, Mail, Phone, Database, Mic, Share2 } from 'lucide-react';
 
 const Services: React.FC = () => {
   const services = [
@@ -17,6 +17,31 @@ const Services: React.FC = () => {
       icon: Settings,
       title: "Custom Integrations",
       description: "We connect your existing tools (like CRMs, calendars, and Shopify) with our AI agents for full-stack automation."
+    },
+    {
+      icon: Mail,
+      title: "Email Outreach",
+      description: "Automated email campaigns that nurture leads and engage customers with personalized messaging at scale."
+    },
+    {
+      icon: Phone,
+      title: "Phone Callers",
+      description: "AI-powered voice agents that handle inbound and outbound calls, schedule appointments, and qualify leads."
+    },
+    {
+      icon: Database,
+      title: "Lead Qualification & CRM Automation",
+      description: "Automatically score, qualify, and route leads while keeping your CRM data clean and up-to-date."
+    },
+    {
+      icon: Mic,
+      title: "Voice Assistants",
+      description: "Custom voice-enabled AI assistants that provide hands-free support and enhance user experiences."
+    },
+    {
+      icon: Share2,
+      title: "Social Media Automation",
+      description: "Schedule, post, and engage across social platforms with AI-generated content tailored to your brand."
     }
   ];
 
