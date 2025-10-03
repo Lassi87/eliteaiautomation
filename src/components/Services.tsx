@@ -68,16 +68,7 @@ const Services: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {services.map((service, index) => (
             <div key={index} className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105 group relative overflow-hidden">
-              {service.useImage && (
-                <div className="absolute inset-0 opacity-95 dark:opacity-95 flex items-center justify-center">
-                  <img
-                    src="/ChatGPT Image 3. lokak. 2025 klo 07.29.54.png"
-                    alt=""
-                    className="max-w-[80%] max-h-[80%] object-contain"
-                  />
-                </div>
-              )}
-              <div className="relative z-10">
+              <div className="relative">
                 <div className="bg-blue-100 dark:bg-blue-900 w-12 h-12 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                   <service.icon className="w-6 h-6 text-blue-600 dark:text-blue-400" />
                 </div>
@@ -88,6 +79,15 @@ const Services: React.FC = () => {
                   {service.description}
                 </p>
               </div>
+              {service.useImage && (
+                <div className="absolute inset-0 opacity-95 dark:opacity-95 flex items-center justify-center z-20 pointer-events-none">
+                  <img
+                    src="/ChatGPT Image 3. lokak. 2025 klo 07.29.54.png"
+                    alt=""
+                    className="max-w-[80%] max-h-[80%] object-contain"
+                  />
+                </div>
+              )}
             </div>
           ))}
         </div>
