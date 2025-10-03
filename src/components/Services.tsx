@@ -6,42 +6,50 @@ const Services: React.FC = () => {
     {
       icon: MessageCircle,
       title: "Chatbots",
-      description: "Intelligent bots that handle customer support, lead qualification, appointment booking, and more. Custom-trained for your industry."
+      description: "Intelligent bots that handle customer support, lead qualification, appointment booking, and more. Custom-trained for your industry.",
+      useImage: false
     },
     {
       icon: Globe,
       title: "AI-Powered Website Building",
-      description: "Modern, lightning-fast websites built entirely by AI. Design, copy, SEO — done for you."
+      description: "Modern, lightning-fast websites built entirely by AI. Design, copy, SEO — done for you.",
+      useImage: false
     },
     {
       icon: Settings,
       title: "Custom Integrations",
-      description: "We connect your existing tools (like CRMs, calendars, and Shopify) with our AI agents for full-stack automation."
+      description: "We connect your existing tools (like CRMs, calendars, and Shopify) with our AI agents for full-stack automation.",
+      useImage: false
     },
     {
       icon: Mail,
       title: "Email Outreach",
-      description: "Automated email campaigns that nurture leads and engage customers with personalized messaging at scale."
+      description: "Automated email campaigns that nurture leads and engage customers with personalized messaging at scale.",
+      useImage: true
     },
     {
       icon: Phone,
       title: "Phone Callers",
-      description: "AI-powered voice agents that handle inbound and outbound calls, schedule appointments, and qualify leads."
+      description: "AI-powered voice agents that handle inbound and outbound calls, schedule appointments, and qualify leads.",
+      useImage: true
     },
     {
       icon: Database,
       title: "Lead Qualification & CRM Automation",
-      description: "Automatically score, qualify, and route leads while keeping your CRM data clean and up-to-date."
+      description: "Automatically score, qualify, and route leads while keeping your CRM data clean and up-to-date.",
+      useImage: false
     },
     {
       icon: Mic,
       title: "Voice Assistants",
-      description: "Custom voice-enabled AI assistants that provide hands-free support and enhance user experiences."
+      description: "Custom voice-enabled AI assistants that provide hands-free support and enhance user experiences.",
+      useImage: true
     },
     {
       icon: Share2,
       title: "Social Media Automation",
-      description: "Schedule, post, and engage across social platforms with AI-generated content tailored to your brand."
+      description: "Schedule, post, and engage across social platforms with AI-generated content tailored to your brand.",
+      useImage: true
     }
   ];
 
@@ -59,16 +67,27 @@ const Services: React.FC = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {services.map((service, index) => (
-            <div key={index} className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105 group">
-              <div className="bg-blue-100 dark:bg-blue-900 w-12 h-12 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                <service.icon className="w-6 h-6 text-blue-600 dark:text-blue-400" />
+            <div key={index} className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg hover:shadow-lg transition-all duration-300 transform hover:scale-105 group relative overflow-hidden">
+              {service.useImage && (
+                <div className="absolute inset-0 opacity-10 dark:opacity-5">
+                  <img
+                    src="/ChatGPT Image 3. lokak. 2025 klo 07.29.54.png"
+                    alt=""
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              )}
+              <div className="relative z-10">
+                <div className="bg-blue-100 dark:bg-blue-900 w-12 h-12 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <service.icon className="w-6 h-6 text-blue-600 dark:text-blue-400" />
+                </div>
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">
+                  {service.title}
+                </h3>
+                <p className="text-gray-600 dark:text-white text-sm">
+                  {service.description}
+                </p>
               </div>
-              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">
-                {service.title}
-              </h3>
-              <p className="text-gray-600 dark:text-white text-sm">
-                {service.description}
-              </p>
             </div>
           ))}
         </div>
